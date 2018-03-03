@@ -5,3 +5,4 @@ jarzynowa <- rosol - 2
 rosol + jarzynowa
 pomidorowa - rosol
 jarzynowa * pomidorowa
+# test
