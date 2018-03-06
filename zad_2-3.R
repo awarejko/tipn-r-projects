@@ -7,7 +7,5 @@ for (i in years) {
     }
   } else if(i %% 400 == 0) {
     print(i)
-  } else {
-    i <- i + 1
   }
 }

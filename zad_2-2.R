@@ -7,3 +7,4 @@ additional <- as.numeric(difftime(strptime("23:59", format = "%H:%M"),
 hours <- hours + additional
 
 paste("do końca studiów zostało", hours, "godzin")
+
