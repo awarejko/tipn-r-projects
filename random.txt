@@ -1,3 +1,5 @@
+Witaj, wędrowcze.
+
 Kazali, to robię. Ale mam problem, o którym głupio mi powiedzieć.
 Otóż nie mogę tworzyć nowych repozytoriów, bo coś mam schrzanione chyba w systemie.
 No to tego, elo.
