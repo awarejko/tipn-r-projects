@@ -10,3 +10,4 @@ while (i <= 2018) {
   } 
   i <- i + 1
 }
+# nie wiem dlaczego działa tylko jak się odpali osobno i i pętlę
