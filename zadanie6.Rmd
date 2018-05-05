@@ -1,0 +1,43 @@
+---
+title: "zadanie6"
+author: "Agata Warejko"
+date: "29 kwietnia 2018"
+output: 
+  html_document:
+    theme: united
+    highlight: espresso
+    df_print: paged
+---
+
+# Filmy akcji
+
+Od lat siedemdziesiątych poprzedniego stulecia powstała ogromna liczba filmów akcji. Producenci ze wszystkich krajów porywają widzów w te pościgi i wybuchy, strzelaniny i bijatyki... 
+
+A wewnątrz gatunku "akcja" wyróżniamy między innymi takie podgatunki:
+
+- przygodowy
+- akcja-komedia
+- akcja-horror
+- film katastroficzny
+- film szpiegowski
+- superhero
+
+### Moje osobiste TOP 5
+
+1. Deadpool
+2. Bodyguard: Zawodowiec
+3. Kill Bill
+4. Mroczny Rycerz
+5. Atomic Blonde
+
+### Oczywiście [IMDB](https://www.imdb.com/) ma na ten temat inne zdanie
+
+```{r include = TRUE}
+library(tidyr)
+library(dplyr)
+movies <- read.csv("/home/agata/Dokumenty/technologie/datasets/movies.csv")
+action <- movies %>% filter(Action == "1")
+arrange(action, desc(rating), desc(votes))
+View(action)
+```
+
