@@ -32,12 +32,29 @@ A wewnątrz gatunku "akcja" wyróżniamy między innymi takie podgatunki:
 
 ### Oczywiście [IMDB](https://www.imdb.com/) ma na ten temat inne zdanie
 
-```{r include = TRUE}
+```{r}
 library(tidyr)
 library(dplyr)
 movies <- read.csv("/home/agata/Dokumenty/technologie/datasets/movies.csv")
 action <- movies %>% filter(Action == "1")
 arrange(action, desc(rating), desc(votes))
-View(action)
+```
+
+## Co musi zawierać film, żeby być filmem akcji?
+
+**Protagonista** | **Walka** | **Antagonista** | **Zwycięstwo** | **Miłość**
+:---:|:---:|:---:|:---:|:---:
+tak | tak | raczej tak | tak, chociaż zdarzają się wyjątki | niekoniecznie
+
+## Czy filmy akcji poprawiają się z czasem?
+```{r}
+library(ggplot2)
+ggplot(action, aes(year, rating, colour = mpaa))+
+  geom_point()
+```
+No w sumie to chyba nie bardzo...
+
+```{r include=FALSE}
+summarise(action, rating_mean = mean(rating, na.rm = T))
 ```
 
